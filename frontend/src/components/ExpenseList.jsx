@@ -18,7 +18,7 @@ const ExpenseList = () => {
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-4">Expenses</h2>
+      <h2 className="text-xl font-bold mb-4">ExpensesList</h2>
       <ul>
         {expenses.map((expense) => (
           <li key={expense._id} className="mb-2">

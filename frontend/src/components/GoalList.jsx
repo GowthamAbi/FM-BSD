@@ -18,7 +18,7 @@ const GoalList = () => {
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-4">Goals</h2>
+      <h2 className="text-xl font-bold mb-4">Goals List</h2>
       <ul>
         {goals.map((goal) => (
           <li key={goal._id} className="mb-2">

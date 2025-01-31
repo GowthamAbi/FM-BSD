@@ -4,6 +4,7 @@ import axios from "axios";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const token = localStorage.getItem("token"); // Check if user is logged in
 
   const handleLogout = async () => {
     try {
@@ -22,12 +23,17 @@ const Navbar = () => {
           Finance Manager
         </Link>
         <div className="space-x-4">
-          <Link to="/dashboard" className="text-white">
-            Dashboard
-          </Link>
-          <button onClick={handleLogout} className="text-white">
-            Logout
-          </button>
+          {token ? (
+            <>
+              <Link to="/dashboard" className="text-white">Dashboard</Link>
+              <button onClick={handleLogout} className="text-white">Logout</button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="text-white">Login</Link>
+              <Link to="/register" className="text-white">Register</Link>
+            </>
+          )}
         </div>
       </div>
     </nav>

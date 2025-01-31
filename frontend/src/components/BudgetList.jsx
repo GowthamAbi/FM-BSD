@@ -18,7 +18,7 @@ const BudgetList = () => {
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-4">Budgets</h2>
+      <h2 className="text-xl font-bold mb-4">Budgets List</h2>
       <ul>
         {budgets.map((budget) => (
           <li key={budget._id} className="mb-2">
